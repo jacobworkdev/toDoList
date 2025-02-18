@@ -1,0 +1,163 @@
+
+.todo-app {
+  font-family: 'Arial', sans-serif;
+  max-width: 450px;
+  margin: 40px auto;
+  text-align: center;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+form {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border 0.3s;
+}
+
+input[type="text"]:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+
+ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  background: #333;
+  color: white;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  flex-wrap: wrap; 
+}
+
+li span {
+  flex-grow: 1;
+  padding: 0 10px; 
+  word-break: break-word; 
+}
+
+button {
+  margin-left: 10px; 
+  white-space: nowrap; 
+}
+
+
+li.completed {
+  background-color: #d4edda;
+  border: 1px solid #28a745;
+  color: #155724;
+}
+
+li:not(.completed) {
+  background-color: #f8d7da;
+  border: 1px solid #dc3545;
+  color: #721c24;
+}
+
+li:hover {
+  transform: scale(1.02);
+}
+
+.task-container {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  gap: 10px;
+}
+
+input[type="checkbox"] {
+  transform: scale(1.3);
+  cursor: pointer;
+}
+
+.button-group {
+  display: flex;
+  gap: 5px;
+}
+
+.edit, .delete {
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.edit {
+  background-color: #ffc107;
+  color: black;
+}
+
+.delete {
+  background-color: #dc3545;
+  color: white;
+}
+
+.delete:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+@media (max-width: 500px) {
+  .todo-app {
+    max-width: 90%;
+    padding: 15px;
+  }
+
+  form {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  input[type="text"] {
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .button-group {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
